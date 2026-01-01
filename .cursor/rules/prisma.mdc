@@ -1,0 +1,36 @@
+---
+alwaysApply: false
+---
+
+# Prisma Rules
+
+## Version & Configuration
+
+- This project uses Prisma 6.19.1
+- Prisma 6 uses `url` in `schema.prisma` datasource block
+- Prisma 7 uses `url` in `prisma.config.ts` instead
+- When updating to Prisma 7, move `url` from `schema.prisma` to `prisma.config.ts`
+
+## Schema Files
+
+- `schema.prisma`: Contains models, generators, and datasource configuration
+- `prisma.config.ts`: Contains migration settings and datasource URL (Prisma 7+)
+
+## Current Setup (Prisma 6)
+
+- `schema.prisma` datasource block should include: `url = env("DATABASE_URL")`
+- `prisma.config.ts` should NOT include datasource.url (only migrations path)
+
+## Best Practices
+
+- Always run `npx prisma generate` after schema changes
+- Use `npx prisma db push` for development (MongoDB)
+- Use migrations for production databases
+- Field names should be camelCase (e.g., `clerkId`, not `ClerkId`)
+
+## MongoDB Specific
+
+- Use `@db.ObjectId` for ID fields
+- Use `@map("_id")` for the main ID field to map to MongoDB's `_id`
+- Unique constraints work on MongoDB
+- Relations use `@db.ObjectId` for foreign keys
