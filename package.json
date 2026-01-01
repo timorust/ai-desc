@@ -7,11 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.36.5",
-    "@prisma/client": "^7.2.0",
+    "@prisma/client": "^6.19.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.3",
@@ -28,7 +32,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
-    "prisma": "^7.2.0",
+    "prisma": "^6.19.1",
     "shadcn": "^3.6.2",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
