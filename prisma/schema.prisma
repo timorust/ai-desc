@@ -7,13 +7,12 @@ generator client {
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
-  
 }
 
 
 model User {
   id   String @id @default(auto()) @map("_id") @db.ObjectId
-  clerkId String @unique
+  clerkId  String? @unique
   rssFeeds RssFeed[]
   newsletters Newsletter[]
   settings UserSettings?
@@ -74,7 +73,7 @@ model RssArticle {
   feedId String @db.ObjectId
   feed RssFeed @relation(fields: [feedId], references: [id], onDelete: NoAction)
   guid String @unique
-  sourceFeedIds String[] 
+  sourceFeedIds String[] @db.ObjectId
   title String
   link String
   content String?
@@ -105,7 +104,7 @@ model Newsletter {
   startDate DateTime
   endDate DateTime
   userInput String?
-  feedsUsed String[] 
+  feedsUsed String[] @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
