@@ -1,14 +1,10 @@
+import { Clock, Copy, Rss, Save, Sparkles, Zap } from "lucide-react";
 import {
   Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from "@/components/ui/card";
-import { Clock, Copy, Rss, Save, Sparkles, Zap } from "lucide-react";
-import { title } from "process";
 
 const features = [
   {
@@ -51,11 +47,13 @@ const features = [
 
 export function Features() {
   return (
-    <section>
-      <div>
-        <div>
-          <h2>Everything You Need to Create Amazing Newsletters</h2>
-          <p>
+    <section id="features" className="py-24 sm:py-32 bg-white dark:bg-black">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="text-center mx-auto max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            Everything You Need to Create Amazing Newsletters
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             Powerful features designed specifically for newsletter creators who
             value their time
           </p>
