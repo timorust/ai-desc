@@ -25,7 +25,7 @@ export default async function CTAButtons() {
           variant="outline"
           className="w-full sm:w-auto"
         >
-          <Link href="#pricing">View Pracing</Link>
+          <Link href="#pricing">View Pricing</Link>
         </Button>
       </SignedOut>
 
@@ -56,7 +56,7 @@ export default async function CTAButtons() {
             variant="outline"
             className="w-full sm:w-auto"
           >
-            <Link href="#pricing">View Pracing</Link>
+            <Link href="#pricing">View Pricing</Link>
           </Button>
         </SignedIn>
       )}
