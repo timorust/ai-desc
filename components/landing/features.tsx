@@ -60,6 +60,28 @@ export function Features() {
             value their time
           </p>
         </div>
+
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => {
+            const Icon = feature.icon;
+            return (
+              <Card
+                key={feature.title}
+                className="relative overflow-hidden transition-all hover:shadow-lg"
+              >
+                <CardHeader>
+                  <div className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-linear-to-br from-blue-600 to-pink-600 text-white">
+                    <Icon className="size-6" />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {feature.description}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
