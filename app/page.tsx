@@ -1,3 +1,4 @@
+import CTA from "@/components/landing/cta";
 import { Features } from "@/components/landing/features";
 import Hero from "@/components/landing/hero";
 import { HowWorks } from "@/components/landing/how-works";
@@ -15,6 +16,8 @@ export default function Home() {
           <UserButton />
         </div>
       </SignedIn>
+
+      <CTA />
     </main>
   );
 }
