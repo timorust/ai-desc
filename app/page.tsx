@@ -2,6 +2,7 @@ import CTA from "@/components/landing/cta";
 import { Features } from "@/components/landing/features";
 import Hero from "@/components/landing/hero";
 import { HowWorks } from "@/components/landing/how-works";
+import Pricing from "@/components/landing/pricing";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       </SignedIn>
 
       <CTA />
+      <Pricing />
     </main>
   );
 }
