@@ -8,7 +8,9 @@ export default async function CTAButtons() {
   const { has, userId } = await auth();
 
   const hasPaidPlan =
-    (await has({ plan: "pro" })) || (await has({ plan: "starter" }));
+    (await has({ plan: "pro" })) ||
+    (await has({ plan: "starter" })) ||
+    (await has({ plan: "for-serious-newsletter-creators" }));
 
   return (
     <>
@@ -29,7 +31,7 @@ export default async function CTAButtons() {
         </Button>
       </SignedOut>
 
-      {userId && hasPaidPlan && (
+      {userId && !hasPaidPlan && (
         <SignedIn>
           <Button size="lg" className="w-full sm:w-auto" asChild>
             <Link
@@ -42,7 +44,7 @@ export default async function CTAButtons() {
         </SignedIn>
       )}
 
-      {userId && !hasPaidPlan && (
+      {userId && hasPaidPlan && (
         <SignedIn>
           <Button size="lg" className="w-full sm:w-auto" asChild>
             <Link href="/#pricing" className="flex items-center justify-center">

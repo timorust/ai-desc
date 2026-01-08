@@ -123,3 +123,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.cl-pricingTableCardPeriodToggle label,
+.cl-pricingTableCardPeriodToggle span {
+  color: white;
+}

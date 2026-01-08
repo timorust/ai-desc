@@ -13,7 +13,7 @@ export default function PricingCard({ compact = false }: PricingCardsProps) {
           appearance={{
             elements: {
               pricingTableCardHeader: {
-                backgroundColor: "#6A47FB",
+                backgroundColor: "#0466c8",
                 color: "white",
               },
               pricingTableCardTitle: {
@@ -23,7 +23,7 @@ export default function PricingCard({ compact = false }: PricingCardsProps) {
               },
               pricingTableCardDescription: {
                 fontSize: compact ? "0.875rem" : "1rem",
-                backgroundColor: "#6A47FB",
+                backgroundColor: "#0466c8",
                 color: "white",
               },
               pricingTableCardFee: {

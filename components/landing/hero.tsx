@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <Badge variant="secondary" className="mb-6 px-4 py-1.5">
             <Sparkles className="mr-2 size-4" />
-            AI-Desc Newslettel Creation
+            AI-Desc Newsletter Creation
           </Badge>
 
           <h1 className="text-5xl font-bold tracking-tight text-blue-900 dark:text-white">
