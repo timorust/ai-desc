@@ -18,8 +18,8 @@ export default function Home() {
         </div>
       </SignedIn>
 
-      <CTA />
       <Pricing />
+      <CTA />
     </main>
   );
 }

@@ -1,3 +1,5 @@
+import PricingCard from "../dashboard/pricing-cards";
+
 export default function Pricing() {
   return (
     <section id="pricing" className="py-24 sm:py-32 bg-white dark:bg-black">
@@ -11,7 +13,9 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 flex justify-center">PricingCards</div>
+        <div className="mx-auto mt-16 flex justify-center">
+          <PricingCard />
+        </div>
 
         <p className="mt-8 text-center text-sm text-gray-500 dark:text-gray-500">
           All plans include unlimited newsletter generation. Cancel anytime.
