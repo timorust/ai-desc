@@ -8,9 +8,7 @@ export default async function CTAButtons() {
   const { has, userId } = await auth();
 
   const hasPaidPlan =
-    (await has({ plan: "pro" })) ||
-    (await has({ plan: "starter" })) ||
-    (await has({ plan: "for-serious-newsletter-creators" }));
+    (await has({ plan: "pro" })) || (await has({ plan: "starter" }));
 
   return (
     <>
