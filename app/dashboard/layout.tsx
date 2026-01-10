@@ -1,3 +1,4 @@
+import DashboardHeader from "@/components/dashboard/dashboard-header";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
@@ -15,5 +16,10 @@ export default async function DashboardLayout({
   console.log("Has paid plan:=>", hasPaidPlan);
   if (!hasPaidPlan) redirect("/#pricing");
 
-  return <div className="min-h-screen flex flex-col">{children}</div>;
+  return (
+    <div className="min-h-screen flex flex-col">
+      <DashboardHeader />
+      {children}
+    </div>
+  );
 }
